@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: GPL-3.0-only
+
+ZSHENV="$HOME/.zshenv"
+CONTENT='#!/usr/bin/env zsh
+
+export ZDOTDIR="${HOME}/.config/zsh"
+
+if ! source "$ZDOTDIR/.zshenv"; then
+    echo "FATAL ERROR: Could not source $ZDOTDIR/.zshenv"
+    echo "NOTE: Originated from ${HOME}/.zshenv"
+    return 1
+fi'
+
+if [[ -f "$ZSHENV" ]]; then
+    cp "$ZSHENV" "$HOME/.zshenv.bak"
+    print -P "%B%F{red}Warning: ~/.zshenv already existed and has been backed up to ~/.zshenv.bak%f%b"
+fi
+
+echo "$CONTENT" > "$ZSHENV"
+
+touch "${HOME}/.config/zsh/.zshenv"
+echo "NOTE: Don't forget to update your ~/.config/zsh/.zshenv!"

@@ -1,0 +1,45 @@
+#!/bin/env zsh
+# SPDX-License-Identifier: GPL-3.0-only
+# [P]ackage [U]pdate
+
+source "$ZDOTDIR"/load_aliases.zsh
+
+
+
+echo "---------- Programs ----------"
+
+echo "- Pkgfile..."
+s pkgfile --update
+
+echo "- System..."
+pm -Syu # System packages
+
+echo "- Flatpak..."
+flatpak update # Flatpak packages
+
+
+
+echo "---------- Rust ----------"
+
+echo "- Official"
+rustup update # Official Rust things; clippy, rustfmt, rust itself, etc.
+
+echo "- Not official"
+cargo install-update -a # Non-official Rust addons
+
+
+
+echo "---------- JavaScript ----------"
+
+echo "- Packages"
+command -v pnpm &> /dev/null && pnpm self-update # JavaScript packages
+
+
+
+echo "---------- Neovim ----------"
+
+echo "- Lazy"
+n --headless "+Lazy update" "+Neotree close" +q # Lazy plugins
+
+echo "- Treesitter"
+n --headless "+TSUpdate" "+Neotree close" +q # TreeSitter languages
