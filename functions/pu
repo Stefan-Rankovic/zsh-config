@@ -43,3 +43,16 @@ n --headless "+Lazy update" "+Neotree close" +q # Lazy plugins
 
 echo "- Treesitter"
 n --headless "+TSUpdate" "+Neotree close" +q # TreeSitter languages
+
+
+
+echo "---------- Zinit ----------"
+# First, source it
+source "$ZDOTDIR"/addons/zinit.zsh
+
+echo "- Core"
+zini self-update
+
+echo "- Plugins"
+zini update --parallel
+
