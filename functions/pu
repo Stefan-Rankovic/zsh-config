@@ -46,3 +46,9 @@ zini self-update
 echo "- Plugins"
 zini update --parallel
 
+
+
+echo "---------- Yazi ----------"
+
+echo "- Plugins"
+ya pkg upgrade
