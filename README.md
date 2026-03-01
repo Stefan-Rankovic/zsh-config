@@ -11,6 +11,7 @@ Zsh must be installed.
 > [!WARNING]
 > ~/.config/zsh/ must either not exist or be an empty directory.
 > Back your old config up first!
+
 Run
 ```
 git clone https://github.com/Stefan-Rankovic/zsh-config ~/.config/zsh
