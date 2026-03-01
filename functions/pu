@@ -36,16 +36,6 @@ command -v pnpm &> /dev/null && pnpm self-update # JavaScript packages
 
 
 
-echo "---------- Neovim ----------"
-
-echo "- Lazy"
-n --headless "+Lazy update" "+Neotree close" +q # Lazy plugins
-
-echo "- Treesitter"
-n --headless "+TSUpdate" "+Neotree close" +q # TreeSitter languages
-
-
-
 echo "---------- Zinit ----------"
 # First, source it
 source "$ZDOTDIR"/addons/zinit.zsh
