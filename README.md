@@ -20,9 +20,10 @@ zsh make_envs
 ```
 
 ## Structure
-- All aliases are stored [here](./aliases/). None of them reference any other aliases defined in this repository.
-- All functions are stored in [here](./functions/). They're all either too complicated to be an alias or reference other aliases defined here. They are independent files that are not sourced anywhere and must be added to `PATH` inside a `.zshenv` (which is not included in this repository due to security reasons; I store my API keys there).
-- [Addons](./addons/) are exactly what they say—addons. Things like Zinit, [p10k](https://github.com/romkatv/powerlevel10k/), and similar.
+- All addons are stored [here](./addons/). More details [here](./addons/README.md).
+- All aliases are stored [here](./aliases/). More details [here](./aliases/README.md).
+- All functions are stored [here](./functions/). More details [here](./functions/README.md).
+- All keybindings are stored [here](./keybindings/). More details [here](./keybindings/README.md).
 - [.zshrc](./.zshrc) is just a wrapper to set up [Instant Prompt](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#instant-prompt) and source other files.
 
 ## Improving
@@ -31,3 +32,4 @@ They will be sourced automatically.
 
 ## License
 See [LICENSE](./LICENSE)
+
