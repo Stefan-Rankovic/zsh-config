@@ -7,9 +7,10 @@ if [[ -r "${XDG_CACHE_HOME}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source $ZDOTDIR/load_keybindings.zsh
 source $ZDOTDIR/load_aliases.zsh
 source $ZDOTDIR/load_addons.zsh
-source $ZDOTDIR/load_keybindings.zsh
+source $ZDOTDIR/load_functions.zsh
 
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -'                        # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 

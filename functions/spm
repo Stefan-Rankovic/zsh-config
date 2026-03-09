@@ -1,9 +1,0 @@
-#!/bin/env zsh
-# SPDX-License-Identifier: GPL-3.0-only
-# [S]udo-rs [P]ackage [M]anager
-
-source "$ZDOTDIR"/load_aliases.zsh
-
-[[ -z "$AUR_HELPER" ]] && { echo "AUR helper not set"; return 1; }
-s "$AUR_HELPER" "$@"
-
