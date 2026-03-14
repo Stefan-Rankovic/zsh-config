@@ -3,14 +3,8 @@
 rg() {
 	rg \
 		--hidden --no-ignore \
-		--glob '!/proc/*' \
-		--glob '!/sys/*' \
-		--glob '!/dev/*' \
-		--glob '!/run/*' \
-		--glob '!/@swap/*' \
-		--glob '!/.snapshots/*' \
-		--glob '!/home/.snapshots/*' \
-		--glob '!/mnt/*' \
+		--glob '!/.Trash-0/*' \
+		--glob '!/home/.Trash-0/*' \
 		"$@"
 } # [R]ip [G]rep
 
