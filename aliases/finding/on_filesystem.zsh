@@ -1,12 +1,12 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 fb() {
-	s fd --hidden --no-ignore \
+	fd --hidden --no-ignore \
 		--exclude /mnt/ \
 		--exclude /home/.snapshots/ \
 		--exclude /.snapshots/ \
 		"$@"
-}
+} # [F]ind [B]ase
 
 f() {
     fb --exclude /.Trash-0 \
