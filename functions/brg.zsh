@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 brg() {
-	rg \
+	command rg \
 		--hidden --no-ignore \
 		--glob '!/proc/*' \
 		--glob '!/sys/*' \
