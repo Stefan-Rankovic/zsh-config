@@ -8,9 +8,3 @@ fb() {
 		"$@"
 } # [F]ind [B]ase
 
-f() {
-    fb --exclude /.Trash-0 \
-       --exclude /home/.Trash-0 \
-       --exclude "$HOME/.cache" \
-       "$@" /
-} # [F]ind
